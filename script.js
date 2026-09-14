@@ -1,4 +1,4 @@
-document.querySelectorAll('.section, .hero, .cta').forEach(function (el) {
+document.querySelectorAll('.section, .hero, .ceo').forEach(function (el) {
   el.classList.add('reveal');
 });
 

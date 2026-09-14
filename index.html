@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Cetuspro × Warsaw Medical Expo 2026 - stoisko E16</title>
-<meta name="description" content="Cetuspro - partner technologiczny dla sektora medycznego i MedTech. Warsaw Medical Expo 2026, stoisko E16, wspólnie z SenVisio.">
+<title data-i18n="meta.title">Cetuspro × Warsaw Medical Expo 2026 - stoisko E16</title>
+<meta name="description" content="Cetuspro - partner technologiczny dla sektora medycznego i MedTech. Warsaw Medical Expo 2026, stoisko E16, wspólnie z SenVisio." data-i18n-attr="content" data-i18n="meta.description">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Albert+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -17,6 +17,10 @@
     <div class="header-brand">
       <img class="logo-img" src="logocetus.png" alt="Cetuspro" width="132" height="41">
       <img class="header-eu-flag" src="flaga-ue.png" alt="Flaga Unii Europejskiej" width="24" height="16">
+      <nav class="lang-switch" aria-label="Wybór języka / Language selection">
+        <button type="button" class="lang-switch-btn" data-lang-btn="pl" aria-current="true">PL</button>
+        <button type="button" class="lang-switch-btn" data-lang-btn="en">EN</button>
+      </nav>
     </div>
     <span class="header-tag">Warsaw&nbsp;Medical&nbsp;Expo&nbsp;2026</span>
   </div>
@@ -28,26 +32,33 @@
   <section class="hero">
     <div class="glow glow--1" aria-hidden="true"></div>
     <div class="glow glow--2" aria-hidden="true"></div>
-    <div class="wrap">
-      <p class="eyebrow">Partner technologiczny dla sektora medycznego i MedTech</p>
-      <h1 class="hero-title">
-        Twoje wsparcie technologiczne<br>
-        <span class="accent-text">w cyfryzacji medycyny</span>
-      </h1>
-      <p class="hero-lead">
-        Cetuspro projektuje, buduje i utrzymuje systemy krytyczne dla biznesu -
-        ze szczególnym naciskiem na bezpieczeństwo danych, zgodność z przepisami
-        i stabilność działania. Rozumiemy, że w ochronie zdrowia błędy systemowe
-        i wycieki danych niosą ze sobą krytyczne konsekwencje operacyjne i prawne.
-      </p>
+    <div class="wrap hero-grid">
+      <div class="hero-text">
+        <p class="eyebrow" data-i18n="hero.eyebrow">Partner technologiczny dla sektora medycznego i MedTech</p>
+        <h1 class="hero-title">
+          <span data-i18n="hero.title1">Twoje wsparcie technologiczne</span><br>
+          <span class="accent-text" data-i18n="hero.title2">w cyfryzacji medycyny</span>
+        </h1>
+        <p class="hero-lead" data-i18n="hero.lead">
+          Cetuspro projektuje, buduje i utrzymuje systemy krytyczne dla biznesu -
+          ze szczególnym naciskiem na bezpieczeństwo danych, zgodność z przepisami
+          i stabilność działania. Rozumiemy, że w ochronie zdrowia błędy systemowe
+          i wycieki danych niosą ze sobą krytyczne konsekwencje operacyjne i prawne.
+        </p>
 
-      <div class="hero-cta">
-        <a class="btn btn--block" href="https://cetuspro.com/pl/kontakt" target="_blank" rel="noopener">
-          Umów konsultację
-        </a>
-        <a class="btn btn--outline btn--block" href="cetuspro-warsaw-medical-expo.vcf" download>
-          Zapisz kontakt (vCard)
-        </a>
+        <div class="hero-cta">
+          <a class="btn btn--block" href="https://cetuspro.com/pl/kontakt" data-href-en="https://cetuspro.com/en/kontakt" target="_blank" rel="noopener" data-i18n="hero.ctaConsult">
+            Umów konsultację
+          </a>
+          <a class="btn btn--outline btn--block" href="cetuspro-warsaw-medical-expo.vcf" data-href-en="cetuspro-warsaw-medical-expo-en.vcf" download data-i18n="hero.ctaVcard">
+            Zapisz kontakt (vCard)
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-portrait">
+        <img class="hero-portrait-img hero-portrait-img--color" src="norbert-blob.png" alt="Norbert Pisz, CEO Cetuspro">
+        <img class="hero-portrait-img hero-portrait-img--line" src="norbert-portrait.png" alt="" aria-hidden="true">
       </div>
     </div>
   </section>
@@ -55,7 +66,7 @@
   <!-- 3 FILARY -->
   <section class="section section--alt" id="filary">
     <div class="wrap">
-      <p class="section-kicker">- Dlaczego rozmawiać z nami na miejscu</p>
+      <p class="section-kicker" data-i18n="pillars.kicker">- Dlaczego rozmawiać z nami na miejscu</p>
 
       <ul class="pillars">
         <li class="pillar">
@@ -64,8 +75,8 @@
             <path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z" stroke="currentColor" stroke-width="1" stroke-linejoin="round"/>
             <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
-          <h3 class="pillar-title">Bezpieczeństwo danych</h3>
-          <p class="pillar-text">Projektujemy systemy z myślą o ochronie danych wrażliwych i zgodności z RODO od pierwszej linii kodu.</p>
+          <h3 class="pillar-title" data-i18n="pillars.1.title">Bezpieczeństwo danych</h3>
+          <p class="pillar-text" data-i18n="pillars.1.text">Projektujemy systemy z myślą o ochronie danych wrażliwych i zgodności z RODO od pierwszej linii kodu.</p>
         </li>
         <li class="pillar">
           <div class="pillar-blob" aria-hidden="true"></div>
@@ -73,16 +84,16 @@
             <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1"/>
             <path d="M12 3v2.5M12 18.5V21M21 12h-2.5M5.5 12H3M18.4 5.6l-1.8 1.8M7.4 16.6l-1.8 1.8M18.4 18.4l-1.8-1.8M7.4 7.4L5.6 5.6" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
           </svg>
-          <h3 class="pillar-title">Procesy krytyczne</h3>
-          <p class="pillar-text">Budujemy platformy, które muszą działać bez przestojów - audyt, architektura i utrzymanie w jednym procesie.</p>
+          <h3 class="pillar-title" data-i18n="pillars.2.title">Procesy krytyczne</h3>
+          <p class="pillar-text" data-i18n="pillars.2.text">Budujemy platformy, które muszą działać bez przestojów - audyt, architektura i utrzymanie w jednym procesie.</p>
         </li>
         <li class="pillar">
           <div class="pillar-blob" aria-hidden="true"></div>
           <svg class="pillar-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
             <path d="M4 19V9M10 19V5M16 19v-7M20 19H4" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
-          <h3 class="pillar-title">Skalowalność</h3>
-          <p class="pillar-text">Systemy gotowe na wzrost liczby użytkowników, integracji i danych - bez przepisywania od zera za rok.</p>
+          <h3 class="pillar-title" data-i18n="pillars.3.title">Skalowalność</h3>
+          <p class="pillar-text" data-i18n="pillars.3.text">Systemy gotowe na wzrost liczby użytkowników, integracji i danych - bez przepisywania od zera za rok.</p>
         </li>
       </ul>
     </div>
@@ -93,8 +104,8 @@
     <div class="glow glow--1" aria-hidden="true"></div>
     <div class="glow glow--2" aria-hidden="true"></div>
     <div class="wrap">
-      <p class="section-kicker">- Usługi</p>
-      <h2 class="section-title">Inżynieria oprogramowania dla organizacji, które nie mogą sobie pozwolić na awarię</h2>
+      <p class="section-kicker" data-i18n="services.kicker">- Usługi</p>
+      <h2 class="section-title" data-i18n="services.title">Inżynieria oprogramowania dla organizacji, które nie mogą sobie pozwolić na awarię</h2>
 
       <ul class="services">
         <li class="service service--flagship">
@@ -104,9 +115,9 @@
             <path d="M2 8.5h20" stroke="currentColor" stroke-width="1"/>
             <path d="M8 22h8M12 19v3" stroke="currentColor" stroke-width="1"/>
           </svg>
-          <span class="service-flag">Usługa flagowa</span>
-          <h3 class="service-title">Aplikacje webowe</h3>
-          <p class="service-text">Skalowalne platformy dla procesów krytycznych - portale, systemy wewnętrzne i panele zarządzania danymi, projektowane z myślą o bezpieczeństwie i zgodności z RODO.</p>
+          <span class="service-flag" data-i18n="services.flag">Usługa flagowa</span>
+          <h3 class="service-title" data-i18n="services.web.title">Aplikacje webowe</h3>
+          <p class="service-text" data-i18n="services.web.text">Skalowalne platformy dla procesów krytycznych - portale, systemy wewnętrzne i panele zarządzania danymi, projektowane z myślą o bezpieczeństwie i zgodności z RODO.</p>
           <p class="service-stack">.NET Core · React · Azure · AWS · Google Cloud</p>
         </li>
 
@@ -116,8 +127,8 @@
             <rect x="7" y="2" width="10" height="20" rx="2" stroke="currentColor" stroke-width="1"/>
             <path d="M11 18h2" stroke="currentColor" stroke-width="1"/>
           </svg>
-          <h3 class="service-title">Aplikacje mobilne</h3>
-          <p class="service-text">Aplikacje klasy produkcyjnej (iOS/Android) dla personelu, pacjentów lub partnerów biznesowych - stabilne, bezpieczne, spójne z resztą systemu.</p>
+          <h3 class="service-title" data-i18n="services.mobile.title">Aplikacje mobilne</h3>
+          <p class="service-text" data-i18n="services.mobile.text">Aplikacje klasy produkcyjnej (iOS/Android) dla personelu, pacjentów lub partnerów biznesowych - stabilne, bezpieczne, spójne z resztą systemu.</p>
         </li>
 
         <li class="service">
@@ -129,7 +140,7 @@
             <path d="M8 21h8" stroke="currentColor" stroke-width="1"/>
           </svg>
           <h3 class="service-title">Fast Prototyping</h3>
-          <p class="service-text">Zweryfikuj pomysł na system, zanim zainwestujesz w pełny rozwój - klikalny prototyp w kilka dni, nie miesięcy.</p>
+          <p class="service-text" data-i18n="services.proto.text">Zweryfikuj pomysł na system, zanim zainwestujesz w pełny rozwój - klikalny prototyp w kilka dni, nie miesięcy.</p>
         </li>
 
         <li class="service">
@@ -138,8 +149,8 @@
             <path d="M12 3l1.8 4.6L18 9l-4.2 1.4L12 15l-1.8-4.6L6 9l4.2-1.4L12 3z" stroke="currentColor" stroke-width="1" stroke-linejoin="round"/>
             <path d="M19 14l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8.8-2z" stroke="currentColor" stroke-width="1" stroke-linejoin="round"/>
           </svg>
-          <h3 class="service-title">AI i automatyzacja</h3>
-          <p class="service-text">Automatyzacja procesów operacyjnych i administracyjnych tam, gdzie realnie odciąża zespół - integracje LLM, agenci, workflow.</p>
+          <h3 class="service-title" data-i18n="services.ai.title">AI i automatyzacja</h3>
+          <p class="service-text" data-i18n="services.ai.text">Automatyzacja procesów operacyjnych i administracyjnych tam, gdzie realnie odciąża zespół - integracje LLM, agenci, workflow.</p>
         </li>
 
         <li class="service">
@@ -149,7 +160,7 @@
             <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
           <h3 class="service-title">Cybersecurity</h3>
-          <p class="service-text">Audyty i testy bezpieczeństwa oraz wsparcie w zgodności z wymogami regulacyjnymi (w tym RODO) - kluczowe wszędzie tam, gdzie przetwarzane są dane wrażliwe.</p>
+          <p class="service-text" data-i18n="services.security.text">Audyty i testy bezpieczeństwa oraz wsparcie w zgodności z wymogami regulacyjnymi (w tym RODO) - kluczowe wszędzie tam, gdzie przetwarzane są dane wrażliwe.</p>
         </li>
 
         <li class="service">
@@ -160,8 +171,8 @@
             <circle cx="17" cy="8" r="2.3" stroke="currentColor" stroke-width="1"/>
             <path d="M15.5 14.2c2.7.4 4.5 2.6 4.5 5.8" stroke="currentColor" stroke-width="1"/>
           </svg>
-          <h3 class="service-title">Outsourcing programistów</h3>
-          <p class="service-text">Doświadczone zespoły wzmacniające Wasz dział IT, z pełnym governance i transparentną komunikacją.</p>
+          <h3 class="service-title" data-i18n="services.outsourcing.title">Outsourcing programistów</h3>
+          <p class="service-text" data-i18n="services.outsourcing.text">Doświadczone zespoły wzmacniające Wasz dział IT, z pełnym governance i transparentną komunikacją.</p>
         </li>
       </ul>
     </div>
@@ -170,40 +181,40 @@
   <!-- PROCES -->
   <section class="section section--alt" id="proces">
     <div class="wrap">
-      <p class="section-kicker">- Jak pracujemy</p>
-      <h2 class="section-title">Proces, który daje przewidywalność nawet w regulowanym środowisku</h2>
-      <p class="section-lead">W środowiskach regulowanych, takich jak ochrona zdrowia, już na etapie audytu kładziemy dodatkowy nacisk na zgodność z przepisami i bezpieczeństwo danych.</p>
+      <p class="section-kicker" data-i18n="process.kicker">- Jak pracujemy</p>
+      <h2 class="section-title" data-i18n="process.title">Proces, który daje przewidywalność nawet w regulowanym środowisku</h2>
+      <p class="section-lead" data-i18n="process.lead">W środowiskach regulowanych, takich jak ochrona zdrowia, już na etapie audytu kładziemy dodatkowy nacisk na zgodność z przepisami i bezpieczeństwo danych.</p>
 
       <ol class="timeline">
         <li class="timeline-step">
           <span class="timeline-bar timeline-bar--1" aria-hidden="true"></span>
           <span class="timeline-num">01</span>
-          <h3 class="timeline-title">Audyt</h3>
-          <p class="timeline-text">Sprawdzamy system, procesy i dane, zanim powstanie pierwsza linijka kodu.</p>
+          <h3 class="timeline-title" data-i18n="process.step1.title">Audyt</h3>
+          <p class="timeline-text" data-i18n="process.step1.text">Sprawdzamy system, procesy i dane, zanim powstanie pierwsza linijka kodu.</p>
         </li>
         <li class="timeline-step">
           <span class="timeline-bar timeline-bar--2" aria-hidden="true"></span>
           <span class="timeline-num">02</span>
-          <h3 class="timeline-title">Roadmapa</h3>
-          <p class="timeline-text">Priorytety, zależności i cele biznesowe w jednym planie.</p>
+          <h3 class="timeline-title" data-i18n="process.step2.title">Roadmapa</h3>
+          <p class="timeline-text" data-i18n="process.step2.text">Priorytety, zależności i cele biznesowe w jednym planie.</p>
         </li>
         <li class="timeline-step">
           <span class="timeline-bar timeline-bar--3" aria-hidden="true"></span>
           <span class="timeline-num">03</span>
-          <h3 class="timeline-title">Realizacja</h3>
-          <p class="timeline-text">Iteracyjny rozwój zgodny ze standardami jakości.</p>
+          <h3 class="timeline-title" data-i18n="process.step3.title">Realizacja</h3>
+          <p class="timeline-text" data-i18n="process.step3.text">Iteracyjny rozwój zgodny ze standardami jakości.</p>
         </li>
         <li class="timeline-step">
           <span class="timeline-bar timeline-bar--4" aria-hidden="true"></span>
           <span class="timeline-num">04</span>
-          <h3 class="timeline-title">Odbiory</h3>
-          <p class="timeline-text">Regularna weryfikacja postępu z Waszymi celami.</p>
+          <h3 class="timeline-title" data-i18n="process.step4.title">Odbiory</h3>
+          <p class="timeline-text" data-i18n="process.step4.text">Regularna weryfikacja postępu z Waszymi celami.</p>
         </li>
         <li class="timeline-step">
           <span class="timeline-bar timeline-bar--5" aria-hidden="true"></span>
           <span class="timeline-num">05</span>
-          <h3 class="timeline-title">Utrzymanie</h3>
-          <p class="timeline-text">Monitoring, aktualizacje i stabilność w ramach SLA.</p>
+          <h3 class="timeline-title" data-i18n="process.step5.title">Utrzymanie</h3>
+          <p class="timeline-text" data-i18n="process.step5.text">Monitoring, aktualizacje i stabilność w ramach SLA.</p>
         </li>
       </ol>
     </div>
@@ -214,16 +225,16 @@
     <div class="glow glow--1" aria-hidden="true"></div>
     <div class="glow glow--2" aria-hidden="true"></div>
     <div class="wrap">
-      <p class="section-kicker">- Kontakt</p>
+      <p class="section-kicker" data-i18n="contact.kicker">- Kontakt</p>
 
       <div class="trust">
         <div class="trust-item">
           <span class="trust-value">ISO 9001:2015</span>
-          <span class="trust-label">System zarządzania jakością</span>
+          <span class="trust-label" data-i18n="contact.iso">System zarządzania jakością</span>
         </div>
         <div class="trust-item">
           <span class="trust-value">Rzeszów</span>
-          <span class="trust-label">Siedziba, Polska</span>
+          <span class="trust-label" data-i18n="contact.hq">Siedziba, Polska</span>
         </div>
         <div class="trust-item">
           <span class="trust-value">Norbert Pisz</span>
@@ -245,8 +256,8 @@
   <section class="ceo">
     <div class="wrap ceo-grid">
       <div class="ceo-text">
-        <p class="ceo-lead">Budujemy systemy dla firm z różnych branż - od marketplace'ów, przez galerie sprzedaży online, po platformy serwisowe.</p>
-        <p class="ceo-lead ceo-lead--bold">Kolejny możemy zbudować dla Ciebie.</p>
+        <p class="ceo-lead" data-i18n="ceo.lead1">Budujemy systemy dla firm z różnych branż - od marketplace'ów, przez galerie sprzedaży online, po platformy serwisowe.</p>
+        <p class="ceo-lead ceo-lead--bold" data-i18n="ceo.lead2">Kolejny możemy zbudować dla Ciebie.</p>
       </div>
 
       <div class="ceo-portrait">
@@ -257,9 +268,9 @@
       <div class="ceo-info">
         <h2 class="ceo-name">Norbert Pisz</h2>
         <p class="ceo-role">CEO, Cetuspro</p>
-        <p class="ceo-note">Umów bezpłatną konsultację - porozmawiamy o Twoim projekcie, zakresie prac i modelu współpracy.</p>
-        <p class="ceo-note ceo-note--medtech">Reprezentujesz organizację medyczną? Porozmawiajmy o systemie dla Twojej placówki.</p>
-        <a class="btn" href="https://cetuspro.com/pl/kontakt" target="_blank" rel="noopener">
+        <p class="ceo-note" data-i18n="ceo.note1">Umów bezpłatną konsultację - porozmawiamy o Twoim projekcie, zakresie prac i modelu współpracy.</p>
+        <p class="ceo-note ceo-note--medtech" data-i18n="ceo.note2">Reprezentujesz organizację medyczną? Porozmawiajmy o systemie dla Twojej placówki.</p>
+        <a class="btn" href="https://cetuspro.com/pl/kontakt" data-href-en="https://cetuspro.com/en/kontakt" target="_blank" rel="noopener" data-i18n="ceo.cta">
           Bezpłatna konsultacja
         </a>
       </div>
@@ -270,45 +281,45 @@
 
 <footer class="site-footer">
   <div class="wrap">
-    <p class="footer-lead">Projektujemy, budujemy i utrzymujemy systemy, na których opiera się Twój biznes.</p>
+    <p class="footer-lead" data-i18n="footer.lead">Projektujemy, budujemy i utrzymujemy systemy, na których opiera się Twój biznes.</p>
 
     <div class="footer-grid">
       <div class="footer-col footer-col--brand">
         <img class="footer-logo" src="logocetus.png" alt="Cetuspro" width="120" height="37">
-        <p class="footer-address">ul. Adama Matuszczaka 14<br>35-083 Rzeszów, Polska</p>
-        <p class="footer-nip">NIP: 8133850782</p>
-        <a class="footer-link footer-link--accent" href="https://cetuspro.com/pl/kontakt" target="_blank" rel="noopener">Napisz do nas</a>
+        <p class="footer-address" data-i18n="footer.address" data-i18n-html="true">ul. Adama Matuszczaka 14<br>35-083 Rzeszów, Polska</p>
+        <p class="footer-nip" data-i18n="footer.nip">NIP: 8133850782</p>
+        <a class="footer-link footer-link--accent" href="https://cetuspro.com/pl/kontakt" data-href-en="https://cetuspro.com/en/kontakt" target="_blank" rel="noopener" data-i18n="footer.contactUs">Napisz do nas</a>
       </div>
 
       <div class="footer-col">
-        <p class="footer-col-title">Nawigacja</p>
+        <p class="footer-col-title" data-i18n="footer.nav.title">Nawigacja</p>
         <ul class="footer-links">
-          <li><a href="https://cetuspro.com/pl" target="_blank" rel="noopener">Strona główna</a></li>
-          <li><a href="https://cetuspro.com/pl/oferta" target="_blank" rel="noopener">Usługi</a></li>
-          <li><a href="https://cetuspro.com/pl/kontakt" target="_blank" rel="noopener">Kontakt</a></li>
+          <li><a href="https://cetuspro.com/pl" data-href-en="https://cetuspro.com/en" target="_blank" rel="noopener" data-i18n="footer.nav.home">Strona główna</a></li>
+          <li><a href="https://cetuspro.com/pl/oferta" data-href-en="https://cetuspro.com/en/oferta" target="_blank" rel="noopener" data-i18n="footer.nav.services">Usługi</a></li>
+          <li><a href="https://cetuspro.com/pl/kontakt" data-href-en="https://cetuspro.com/en/kontakt" target="_blank" rel="noopener" data-i18n="footer.nav.contact">Kontakt</a></li>
         </ul>
       </div>
 
       <div class="footer-col">
-        <p class="footer-col-title">Usługi</p>
+        <p class="footer-col-title" data-i18n="footer.services.title">Usługi</p>
         <ul class="footer-links">
-          <li><a href="https://cetuspro.com/pl/oferta/aplikacje-webowe" target="_blank" rel="noopener">Aplikacje webowe</a></li>
-          <li><a href="https://cetuspro.com/pl/oferta/aplikacje-mobilne" target="_blank" rel="noopener">Aplikacje mobilne</a></li>
-          <li><a href="https://cetuspro.com/pl/oferta/ui-ux-design" target="_blank" rel="noopener">UX/UI Design</a></li>
-          <li><a href="https://cetuspro.com/pl/oferta/aI-i-automatyzacja-procesow" target="_blank" rel="noopener">AI i automatyzacja procesów</a></li>
-          <li><a href="https://cetuspro.com/pl/oferta/cybersecurity" target="_blank" rel="noopener">Cybersecurity</a></li>
-          <li><a href="https://cetuspro.com/pl/oferta/transformacja-technologiczna" target="_blank" rel="noopener">Transformacja technologiczna</a></li>
-          <li><a href="https://cetuspro.com/pl/oferta/outsourcing-programistow" target="_blank" rel="noopener">Outsourcing programistów</a></li>
-          <li><a href="https://cetuspro.com/pl/oferta/akademia-i-szkolenia" target="_blank" rel="noopener">Akademia i szkolenia</a></li>
+          <li><a href="https://cetuspro.com/pl/oferta/aplikacje-webowe" data-href-en="https://cetuspro.com/en/oferta/aplikacje-webowe" target="_blank" rel="noopener" data-i18n="footer.services.web">Aplikacje webowe</a></li>
+          <li><a href="https://cetuspro.com/pl/oferta/aplikacje-mobilne" data-href-en="https://cetuspro.com/en/oferta/aplikacje-mobilne" target="_blank" rel="noopener" data-i18n="footer.services.mobile">Aplikacje mobilne</a></li>
+          <li><a href="https://cetuspro.com/pl/oferta/ui-ux-design" data-href-en="https://cetuspro.com/en/oferta/ui-ux-design" target="_blank" rel="noopener">UX/UI Design</a></li>
+          <li><a href="https://cetuspro.com/pl/oferta/aI-i-automatyzacja-procesow" data-href-en="https://cetuspro.com/en/oferta/aI-i-automatyzacja-procesow" target="_blank" rel="noopener" data-i18n="footer.services.ai">AI i automatyzacja procesów</a></li>
+          <li><a href="https://cetuspro.com/pl/oferta/cybersecurity" data-href-en="https://cetuspro.com/en/oferta/cybersecurity" target="_blank" rel="noopener">Cybersecurity</a></li>
+          <li><a href="https://cetuspro.com/pl/oferta/transformacja-technologiczna" data-href-en="https://cetuspro.com/en/oferta/transformacja-technologiczna" target="_blank" rel="noopener" data-i18n="footer.services.transformation">Transformacja technologiczna</a></li>
+          <li><a href="https://cetuspro.com/pl/oferta/outsourcing-programistow" data-href-en="https://cetuspro.com/en/oferta/outsourcing-programistow" target="_blank" rel="noopener" data-i18n="footer.services.outsourcing">Outsourcing programistów</a></li>
+          <li><a href="https://cetuspro.com/pl/oferta/akademia-i-szkolenia" data-href-en="https://cetuspro.com/en/oferta/akademia-i-szkolenia" target="_blank" rel="noopener" data-i18n="footer.services.academy">Akademia i szkolenia</a></li>
         </ul>
       </div>
 
       <div class="footer-col">
-        <p class="footer-col-title">Dokumenty</p>
+        <p class="footer-col-title" data-i18n="footer.docs.title">Dokumenty</p>
         <ul class="footer-links">
-          <li><a href="https://cetuspro.com/pl/polityka-jakosci" target="_blank" rel="noopener">Polityka Jakości</a></li>
-          <li><a href="https://cetuspro.com/pl/polityka-prywatnosci" target="_blank" rel="noopener">Polityka prywatności</a></li>
-          <li><a href="https://cetuspro.com/pl/dofinansowanie" target="_blank" rel="noopener">Fundusze Europejskie</a></li>
+          <li><a href="https://cetuspro.com/pl/polityka-jakosci" data-href-en="https://cetuspro.com/en/polityka-jakosci" target="_blank" rel="noopener" data-i18n="footer.docs.quality">Polityka Jakości</a></li>
+          <li><a href="https://cetuspro.com/pl/polityka-prywatnosci" data-href-en="https://cetuspro.com/en/polityka-prywatnosci" target="_blank" rel="noopener" data-i18n="footer.docs.privacy">Polityka prywatności</a></li>
+          <li><a href="https://cetuspro.com/pl/dofinansowanie" data-href-en="https://cetuspro.com/en/dofinansowanie" target="_blank" rel="noopener" data-i18n="footer.docs.funding">Fundusze Europejskie</a></li>
         </ul>
       </div>
     </div>
@@ -321,7 +332,7 @@
         <source media="(max-width: 639px)" srcset="fundusze-eu-pion.png">
         <img class="footer-funding-img" src="fundusze-eu-wide.png" alt="Fundusze Europejskie Polska Wschodnia, Rzeczpospolita Polska, Unia Europejska - Europejski Fundusz Rozwoju Regionalnego">
       </picture>
-      <p class="footer-funding-text">
+      <p class="footer-funding-text" data-i18n="footer.fundingText" data-i18n-html="true">
         Projekt współfinansowany ze środków Unii Europejskiej.<br>
         <a href="https://cetuspro.com/pl/dofinansowanie" target="_blank" rel="noopener">Szczegóły dofinansowania</a>
       </p>
@@ -329,9 +340,9 @@
       <div class="footer-iso">
         <span class="footer-iso-badge">ISO 9001:2015</span>
         <div class="footer-iso-copy">
-          <span class="footer-iso-title">System zarządzania jakością</span>
-          <span class="footer-iso-text">Certyfikat nr GIPO-1031-QC, jednostka certyfikująca G-CERTI (akredytacja IAS MSCB-113). Zakres certyfikacji: usługi szkoleniowe.</span>
-          <a class="footer-iso-link" href="https://cetuspro.com/pl/polityka-jakosci" target="_blank" rel="noopener">Polityka jakości</a>
+          <span class="footer-iso-title" data-i18n="footer.isoTitle">System zarządzania jakością</span>
+          <span class="footer-iso-text" data-i18n="footer.isoText">Certyfikat nr GIPO-1031-QC, jednostka certyfikująca G-CERTI (akredytacja IAS MSCB-113). Zakres certyfikacji: usługi szkoleniowe.</span>
+          <a class="footer-iso-link" href="https://cetuspro.com/pl/polityka-jakosci" data-href-en="https://cetuspro.com/en/polityka-jakosci" target="_blank" rel="noopener" data-i18n="footer.isoLink">Polityka jakości</a>
         </div>
       </div>
     </div>
@@ -344,8 +355,8 @@
       </div>
 
       <div class="footer-socials">
-        <span class="footer-socials-label">Bądź na bieżąco</span>
-        <span class="footer-socials-sub">Obserwuj nas w mediach społecznościowych</span>
+        <span class="footer-socials-label" data-i18n="footer.social.label">Bądź na bieżąco</span>
+        <span class="footer-socials-sub" data-i18n="footer.social.sub">Obserwuj nas w mediach społecznościowych</span>
         <div class="footer-social-links">
           <a href="https://www.facebook.com/cetusprocom/?locale=pl_PL" target="_blank" rel="noopener" aria-label="Facebook">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M14 9h2V6h-2c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h2.2l.8-3H14V9z" fill="currentColor"/></svg>
@@ -360,28 +371,29 @@
       </div>
     </div>
 
-    <p class="footer-copy">Cetuspro · Rzeszów, Polska · Warsaw Medical Expo 2026 · Stoisko E16 · wspólnie z SenVisio</p>
+    <p class="footer-copy" data-i18n="footer.copy">Cetuspro · Rzeszów, Polska · Warsaw Medical Expo 2026 · Stoisko E16 · wspólnie z SenVisio</p>
   </div>
 </footer>
 
 <!-- STICKY MOBILE CTA BAR -->
 <div class="sticky-cta" role="region" aria-label="Szybki kontakt">
-  <a class="sticky-cta-btn sticky-cta-btn--outline" href="cetuspro-warsaw-medical-expo.vcf" download>
+  <a class="sticky-cta-btn sticky-cta-btn--outline" href="cetuspro-warsaw-medical-expo.vcf" data-href-en="cetuspro-warsaw-medical-expo-en.vcf" download>
     <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true">
       <rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" stroke-width="1.6"/>
       <path d="M7 9h.01M7 13h6M7 16h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
     </svg>
-    Zapisz kontakt
+    <span data-i18n="sticky.save">Zapisz kontakt</span>
   </a>
-  <a class="sticky-cta-btn" href="https://cetuspro.com/pl/kontakt" target="_blank" rel="noopener">
+  <a class="sticky-cta-btn" href="https://cetuspro.com/pl/kontakt" data-href-en="https://cetuspro.com/en/kontakt" target="_blank" rel="noopener">
     <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true">
       <rect x="3" y="5" width="18" height="15" rx="2" stroke="currentColor" stroke-width="1.6"/>
       <path d="M3 9h18M8 3v4M16 3v4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
     </svg>
-    Umów konsultację
+    <span data-i18n="sticky.book">Umów konsultację</span>
   </a>
 </div>
 
+<script src="i18n.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

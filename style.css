@@ -97,6 +97,35 @@ img, svg { display: block; max-width: 100%; }
   flex: none;
 }
 
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  margin-left: 2px;
+}
+
+.lang-switch-btn {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.lang-switch-btn.is-active {
+  color: var(--text);
+}
+
+.lang-switch-btn:hover {
+  color: var(--accent);
+}
+
 .header-tag {
   font-family: var(--font-body);
   font-size: 11.5px;
@@ -155,6 +184,32 @@ img, svg { display: block; max-width: 100%; }
 .hero > .wrap {
   position: relative;
   z-index: 1;
+}
+
+.hero-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.hero-portrait {
+  position: relative;
+  width: min(400px, 86vw);
+  margin: 0 auto;
+}
+
+.hero-portrait-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  -webkit-mask-image: linear-gradient(to bottom, #000 58%, transparent 92%);
+  mask-image: linear-gradient(to bottom, #000 58%, transparent 92%);
+}
+
+.hero-portrait-img--line {
+  position: absolute;
+  inset: 0;
+  opacity: 0.18;
 }
 
 .eyebrow {
@@ -535,7 +590,6 @@ img, svg { display: block; max-width: 100%; }
   display: block;
   width: 100%;
   height: auto;
-  transform: scaleX(-1);
 }
 
 .ceo-img--line {
@@ -605,10 +659,11 @@ img, svg { display: block; max-width: 100%; }
 
 .footer-lead {
   text-align: center;
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.5;
   color: #fff;
-  max-width: 32ch;
+  max-width: 48rem;
   margin: 0 auto 36px;
 }
 
@@ -684,7 +739,7 @@ img, svg { display: block; max-width: 100%; }
   display: block;
   height: auto;
   width: 100%;
-  max-width: 420px;
+  max-width: 280px;
 }
 
 .footer-funding-text {
@@ -870,6 +925,7 @@ img, svg { display: block; max-width: 100%; }
 
   .hero-title { font-size: 42px; }
   .section-title { font-size: 30px; }
+  .footer-lead { font-size: 24px; }
 
   .services {
     grid-template-columns: 1fr 1fr;
@@ -938,6 +994,20 @@ img, svg { display: block; max-width: 100%; }
   .hero { padding: 72px 0 80px; }
   .hero-title { font-size: 50px; }
   .hero-lead { font-size: 18px; }
+
+  .hero-grid {
+    flex-direction: row;
+    align-items: center;
+    gap: 48px;
+  }
+
+  .hero-text { flex: 1; }
+
+  .hero-portrait {
+    flex: 0 0 440px;
+    width: 440px;
+    order: 2;
+  }
 
   .section { padding: 80px 0; }
   .section-title { font-size: 34px; }
