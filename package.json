@@ -1,0 +1,8 @@
+{
+  "name": "cetuspro-warsaw-medical-expo",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "rm -rf dist && mkdir dist && cp index.html style.css script.js i18n.js *.png *.vcf dist/"
+  }
+}
