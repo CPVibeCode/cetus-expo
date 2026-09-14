@@ -1,0 +1,966 @@
+:root {
+  --bg: #f3f4f6;
+  --bg-alt: #ffffff;
+  --text: #0f172b;
+  --text-muted: #52606d;
+  --border: #e2e8f0;
+
+  --accent: #155dfc;
+  --accent-hover: #1447c9;
+  --accent-light: #8ec5ff;
+  --accent-blob: rgba(43, 127, 255, 0.12);
+
+  --dark-950: #020618;
+  --dark-900: #0f172b;
+  --flagship-1: #162556;
+  --flagship-2: #1c398e;
+
+  --radius: 16px;
+  --radius-lg: 20px;
+  --wrap: 560px;
+  --font-head: "Michroma", sans-serif;
+  --font-body: "Albert Sans", sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  padding-bottom: 68px;
+}
+
+.wrap {
+  max-width: var(--wrap);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+h1, h2, h3 {
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.hero-title,
+.section-title {
+  font-family: var(--font-head);
+  letter-spacing: -0.03em;
+}
+
+p { margin: 0; }
+
+a { color: inherit; }
+
+img, svg { display: block; max-width: 100%; }
+
+/* Header */
+.site-header {
+  background: var(--bg-alt);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: none;
+}
+
+.logo-img {
+  height: 30px;
+  width: auto;
+}
+
+.header-eu-flag {
+  height: 18px;
+  width: auto;
+  border-radius: 2px;
+  flex: none;
+}
+
+.header-tag {
+  font-family: var(--font-body);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--accent);
+  background: #eaf1ff;
+  padding: 6px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
+  text-align: right;
+}
+
+/* Soft glow overlay — matches the light-blue radial wash used on cetuspro.com/pl/kontakt,
+   applied to every other section (hero, usługi, kontakt) for rhythm */
+.glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(64px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.glow--1 {
+  width: 220px;
+  height: 220px;
+  top: -40px;
+  left: -50px;
+  background: rgba(81, 161, 255, 0.18);
+}
+
+.glow--2 {
+  width: 320px;
+  height: 320px;
+  top: 30%;
+  right: -70px;
+  background: rgba(115, 210, 255, 0.22);
+}
+
+.section--glow {
+  position: relative;
+  overflow: hidden;
+}
+
+.section--glow > .wrap {
+  position: relative;
+  z-index: 1;
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 44px 0 56px;
+}
+
+.hero > .wrap {
+  position: relative;
+  z-index: 1;
+}
+
+.eyebrow {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 16px;
+}
+
+.hero-title {
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.accent-text { color: var(--accent); }
+
+.hero-lead {
+  margin-top: 20px;
+  font-size: 16.5px;
+  color: var(--text-muted);
+  max-width: 46ch;
+}
+
+/* Hero CTAs */
+.hero-cta {
+  margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.btn--block {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-top: 0;
+}
+
+.btn--outline {
+  background: transparent;
+  color: var(--text);
+  border: 1.5px solid var(--border);
+  box-shadow: none;
+}
+
+.btn--outline:hover {
+  background: var(--bg-alt);
+  border-color: var(--accent);
+}
+
+/* Sections */
+.section {
+  padding: 56px 0;
+}
+
+.section--alt {
+  background: var(--bg-alt);
+}
+
+.section-kicker {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.02em;
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.section-lead {
+  margin-top: 12px;
+  font-size: 15.5px;
+  color: var(--text-muted);
+  max-width: 48ch;
+}
+
+.section-text {
+  margin-top: 28px;
+  font-size: 15.5px;
+  color: var(--text-muted);
+  max-width: 52ch;
+}
+
+/* 3 filary — compact trust cards replacing the old full "targi" section */
+.pillars {
+  list-style: none;
+  margin: 24px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+.pillar {
+  position: relative;
+  overflow: hidden;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+}
+
+.section--alt .pillar { background: var(--bg); }
+
+.pillar-blob {
+  position: absolute;
+  top: -26px;
+  right: -26px;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: var(--accent-blob);
+  filter: blur(20px);
+  z-index: 0;
+}
+
+.pillar-icon {
+  position: relative;
+  z-index: 1;
+  width: 26px;
+  height: 26px;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.pillar-title {
+  position: relative;
+  z-index: 1;
+  font-size: 16.5px;
+  font-weight: 700;
+}
+
+.pillar-text {
+  position: relative;
+  z-index: 1;
+  margin-top: 6px;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+/* Usługi — cards styled like cetuspro.com's service grid */
+.services {
+  list-style: none;
+  margin: 32px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+.service {
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 22px;
+  box-shadow: 0 1px 2px rgba(15, 23, 43, 0.04);
+}
+
+.service-blob {
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: var(--accent-blob);
+  filter: blur(22px);
+  z-index: 0;
+}
+
+.service-icon {
+  position: absolute;
+  bottom: -16px;
+  right: -12px;
+  width: 92px;
+  height: 92px;
+  color: rgba(21, 93, 252, 0.10);
+  z-index: 0;
+}
+
+.service-flag,
+.service-title,
+.service-text,
+.service-stack {
+  position: relative;
+  z-index: 1;
+}
+
+.service--flagship {
+  background: linear-gradient(to bottom right, var(--flagship-1) 0%, var(--flagship-2) 55%, var(--dark-900) 100%);
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 16px 32px -16px rgba(28, 57, 142, 0.55);
+}
+
+.service-icon--flagship {
+  color: rgba(255, 255, 255, 0.08);
+  width: 120px;
+  height: 120px;
+}
+
+.service-flag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--accent-light);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  margin-bottom: 10px;
+}
+
+.service-title {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.service-text {
+  margin-top: 8px;
+  font-size: 14.5px;
+  color: var(--text-muted);
+  max-width: 34ch;
+}
+
+.service--flagship .service-text { color: rgba(255, 255, 255, 0.75); }
+
+.service-stack {
+  margin-top: 14px;
+  font-size: 12.5px;
+  color: rgba(255, 255, 255, 0.55);
+  letter-spacing: 0.01em;
+}
+
+/* Proces — cards with an ascending accent bar, mirrors the site's step cards */
+.timeline {
+  list-style: none;
+  margin: 32px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+.timeline-step {
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 20px 20px 22px;
+  box-shadow: 0 1px 2px rgba(15, 23, 43, 0.04);
+}
+
+.timeline-bar {
+  display: block;
+  height: 4px;
+  width: 100%;
+  border-radius: 999px;
+  background: linear-gradient(to right, var(--accent-light), var(--accent));
+  margin-bottom: 16px;
+  transform-origin: left;
+}
+
+.timeline-bar--1 { opacity: 0.45; }
+.timeline-bar--2 { opacity: 0.6; }
+.timeline-bar--3 { opacity: 0.75; }
+.timeline-bar--4 { opacity: 0.9; }
+.timeline-bar--5 { opacity: 1; }
+
+.timeline-num {
+  display: block;
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+
+.timeline-title {
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.timeline-text {
+  margin-top: 6px;
+  font-size: 14.5px;
+  color: var(--text-muted);
+  max-width: 44ch;
+}
+
+/* Zaufanie */
+.trust {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  text-align: center;
+}
+
+.trust-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 20px 0;
+  border-top: 1px solid var(--border);
+}
+
+.trust-item:first-child { border-top: none; }
+
+.trust-value {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.trust-label {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.linkedin-row {
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* CEO — the same closing section as cetuspro.com's homepage */
+.ceo {
+  background: var(--bg);
+  padding: 56px 0;
+}
+
+.ceo-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.ceo-text {
+  order: 1;
+}
+
+.ceo-lead {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+.ceo-lead--bold {
+  margin-top: 10px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.ceo-portrait {
+  order: 3;
+  display: flex;
+  justify-content: center;
+}
+
+.ceo-portrait {
+  position: relative;
+  width: min(280px, 72vw);
+}
+
+.ceo-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transform: scaleX(-1);
+}
+
+.ceo-img--line {
+  position: absolute;
+  inset: 0;
+  opacity: 0.4;
+}
+
+.ceo-info {
+  order: 2;
+}
+
+.ceo-name {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.ceo-role {
+  margin-top: 4px;
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+
+.ceo-note {
+  margin-top: 16px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+.ceo-note--medtech {
+  margin-top: 10px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.btn {
+  position: relative;
+  display: inline-block;
+  margin-top: 28px;
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  border-radius: var(--radius);
+  padding: 16px 36px;
+  box-shadow: 0 10px 24px -8px rgba(21, 93, 252, 0.5);
+  transition: background-color 0.15s ease, transform 0.15s ease;
+}
+
+.btn:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+}
+
+/* Footer — mirrors the real cetuspro.com footer structure */
+.site-footer {
+  background: linear-gradient(to bottom, var(--dark-950), var(--dark-900), var(--dark-950));
+  padding: 48px 0 28px;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.footer-lead {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  max-width: 32ch;
+  margin: 0 auto 36px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-logo {
+  height: 24px;
+  width: auto;
+  filter: brightness(0) invert(1);
+  opacity: 0.9;
+}
+
+.footer-address,
+.footer-nip {
+  margin-top: 14px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.footer-link {
+  display: inline-block;
+  margin-top: 14px;
+  font-size: 13px;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.footer-link--accent {
+  color: var(--accent-light);
+  font-weight: 600;
+}
+
+.footer-col-title {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 14px;
+}
+
+.footer-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  font-size: 13.5px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-links a:hover { color: #fff; }
+
+/* Funding + ISO — white block matching cetuspro.com's footer, between the two dark sections */
+.footer-funding {
+  background: var(--bg-alt);
+  color: var(--text);
+  padding: 32px 0;
+}
+
+.footer-funding-img {
+  display: block;
+  height: auto;
+  width: 100%;
+  max-width: 420px;
+}
+
+.footer-funding-text {
+  margin-top: 16px;
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.footer-funding-text a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.footer-iso {
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.footer-iso-badge {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  padding: 12px 18px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 17px;
+}
+
+.footer-iso-title {
+  display: block;
+  font-weight: 700;
+  color: var(--text);
+  font-size: 14px;
+}
+
+.footer-iso-text {
+  display: block;
+  margin-top: 6px;
+  font-size: 12.5px;
+  line-height: 1.6;
+  color: var(--text-muted);
+  max-width: 52ch;
+}
+
+.footer-iso-link {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+/* Bottom bar — logo tile + socials, dark */
+.footer-bottom {
+  padding-top: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.footer-brand-box {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 10px 16px;
+  display: inline-flex;
+}
+
+.footer-brand-box .footer-logo {
+  filter: none;
+  opacity: 1;
+}
+
+.footer-socials-label {
+  display: block;
+  font-weight: 700;
+  color: #fff;
+  font-size: 14px;
+}
+
+.footer-socials-sub {
+  display: block;
+  margin-top: 2px;
+  margin-bottom: 12px;
+  font-size: 12.5px;
+}
+
+.footer-social-links {
+  display: flex;
+  gap: 12px;
+}
+
+.footer-social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-social-links a:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+}
+
+.footer-copy {
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.4);
+  text-align: center;
+}
+
+/* Sticky mobile CTA bar */
+.sticky-cta {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 20;
+  display: flex;
+  gap: 10px;
+  padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid var(--border);
+  box-shadow: 0 -8px 24px -12px rgba(15, 23, 43, 0.15);
+}
+
+.sticky-cta-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 12px 10px;
+  border-radius: 12px;
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 13px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.sticky-cta-btn--outline {
+  background: var(--bg);
+  color: var(--text);
+  border: 1.5px solid var(--border);
+}
+
+/* Reveal on scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Tablet / desktop */
+@media (min-width: 640px) {
+  :root { --wrap: 640px; }
+
+  .hero-title { font-size: 42px; }
+  .section-title { font-size: 30px; }
+
+  .services {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .service--flagship {
+    grid-column: 1 / -1;
+  }
+
+  .pillars {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .timeline {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .trust {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .hero-cta {
+    flex-direction: row;
+  }
+
+  .btn--block {
+    width: auto;
+  }
+
+  .sticky-cta {
+    display: none;
+  }
+
+  body {
+    padding-bottom: 0;
+  }
+
+  .trust-item {
+    border-top: none;
+    border-left: 1px solid var(--border);
+    padding: 0 20px;
+  }
+
+  .trust-item:first-child { border-left: none; }
+
+  .footer-grid {
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+    gap: 24px;
+  }
+
+  .footer-bottom {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .footer-iso {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+@media (min-width: 900px) {
+  :root { --wrap: 860px; }
+
+  .hero { padding: 72px 0 80px; }
+  .hero-title { font-size: 50px; }
+  .hero-lead { font-size: 18px; }
+
+  .section { padding: 80px 0; }
+  .section-title { font-size: 34px; }
+
+  .timeline { grid-template-columns: repeat(5, 1fr); }
+
+  .ceo { padding: 80px 0; }
+
+  .ceo-grid {
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 48px;
+  }
+
+  .ceo-text { order: 1; flex: 1; }
+  .ceo-portrait { order: 2; flex: 0 0 auto; width: 300px; }
+  .ceo-info { order: 3; flex: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
